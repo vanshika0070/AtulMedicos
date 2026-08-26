@@ -1,103 +1,187 @@
-import { useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Banner.css";
-import "./Style.css";
-import FloatingCards from "./FloatingCards";
+
+import {
+  FaShieldAlt,
+  FaUserMd,
+  FaMapMarkerAlt,
+  FaClock,
+} from "react-icons/fa";
+
+import { HiOutlineBadgeCheck } from "react-icons/hi";
 
 function Banner() {
-  const buttonRef = useRef(null);
-
-  const handleMouseMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    if (buttonRef.current) {
-      buttonRef.current.style.left = `${x}px`;
-      buttonRef.current.style.top = `${y}px`;
-    }
-  };
-
   return (
     <section className="hero">
       <div className="container">
 
-        {/* Hero Heading */}
-        <div className="hero-title">
-          <h1>Websites</h1>
-          <h1>That</h1>
-          <h1 className="gray">Convert.</h1>
+        {/* ================= LEFT ================= */}
 
-          <p>
-            Fast, responsive websites with modern frontend technologies.
-          </p>
-        </div>
+        <div className="hero-left">
 
-        {/* Cards + Info */}
-        <div className="hero-bottom">
+           <span className="tagged">
+             <HiOutlineBadgeCheck />
+           Trusted Pharmacy Since 1993
+          </span>
 
-          <FloatingCards />
+          <div className="hero-title">
+            <h1>Trusted Medicines.</h1>
+            <h1 className="gray">Personal Care.</h1>
+            <h1>Since 1993.</h1>
 
-          <div className="hero-info">
-            <span className="tag">
-              Frontend & Web Designer
-            </span>
-
-            <p>
-              I build fast, responsive websites that combine modern design,
-              clean code, and exceptional user experience.
-            </p>
-
-            <p>⭐ 2+ years experience • 10+ websites delivered</p>
-
+            <p>Quality medicines, wellness products and  professional  <br />pharmacy services to keep you and your family healthy everyday.</p>
+          
             <div className="hero-buttons">
               <div className="buttons">
 
                 <div className="button-group">
                   <Link to="/freelance" className="btn-white">
-                    Start a Project
+                    Explore Products
                   </Link>
-                  <small>For businesses & startups</small>
                 </div>
 
                 <div className="button-group">
                   <Link to="/hire" className="btn-dark">
-                    View Resume
+                    Visit Our Store
                   </Link>
-                  <small>For hiring & opportunities</small>
                 </div>
 
               </div>
             </div>
+        </div>
+
+          {/* Features */}
+
+          <div className="hero-features">
+
+            <div className="feature">
+
+              <div className="feature-icon">
+
+                <FaShieldAlt />
+
+              </div>
+
+              <div>
+
+                <h4>100% Genuine <br /> Medicines</h4>
+
+                <p>Quality products you can trust.</p>
+
+              </div>
+
+            </div>
+
+            <div className="feature-divider"></div>
+
+            <div className="feature">
+
+              <div className="feature-icon">
+
+                <FaUserMd />
+
+              </div>
+
+              <div>
+
+                <h4>Expert <br /> Pharmacists</h4>
+
+                <p>Professional guidance every day.</p>
+
+              </div>
+
+            </div>
+
+            <div className="feature-divider"></div>
+
+            <div className="feature">
+
+              <div className="feature-icon">
+
+                <FaMapMarkerAlt />
+
+              </div>
+
+              <div>
+
+                <h4>Convenient <br /> Location</h4>
+
+                <p>Easy to reach whenever needed.</p>
+
+              </div>
+
+            </div>
+
           </div>
 
         </div>
 
-        {/* Hero Image */}
-        <a href="/projectsall">
-          <div
-            className="hero-image"
-            onMouseMove={handleMouseMove}
-          >
+        {/* ================= RIGHT ================= */}
+
+        <div className="hero-right">
+
+          <div className="image-wrapper">
+
             <img
-              src="/images/banner.avif"
-              alt="Website Preview"
-              className="image"
+              src="/images/banner.webp"
+              alt="Atul Medicos"
+              className="hero-image"
             />
 
-            <button
-              ref={buttonRef}
-              className="hover-btn"
-            >
-              View Project
-            </button>
+            {/* Store Card */}
+
+            <div className="store-card">
+
+              <div className="store-item">
+
+                <FaMapMarkerAlt className="store-icon" />
+
+                <div>
+
+                  <h5>Visit Our Store</h5>
+
+                  <small>Jeewan Park, Uttam Nagar, New Delhi</small>
+
+                </div>
+
+              </div>
+
+              <div className="store-item">
+
+                <FaClock className="store-icon" />
+
+                <div>
+
+                  <h5>Open Daily</h5>
+
+                  <small>8:30 AM – 11:00 PM</small>
+
+                </div>
+
+              </div>
+
+            </div>
+
           </div>
-        </a>
+
+        </div>
 
       </div>
+
     </section>
   );
 }
 
 export default Banner;
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,76 @@
+.error404{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:2rem;
+    min-height: 55vh;
+}
+
+.error-content{
+    width:min(700px,100%);
+    text-align:center;
+  margin-top: 7%;
+}
+
+
+.error-tag {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  color: #1fe93a;
+  font-size: .9rem;
+  letter-spacing: 1px;
+}
+
+.error-content h1 {
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 800;
+  margin: 0;
+  margin-top:15px;
+}
+
+.error-content p {
+  max-width: 600px;
+  font-size: 1.1rem;
+  color: var(--text);
+  line-height: 1.8;
+  margin: 2rem 0;
+}
+
+.error-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+@media(max-width:757px){
+  .error404{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:2rem;
+    min-height: 100vh;
+    padding: 0 10px;
+}
+
+.error-content{
+    width:min(700px,100%);
+    text-align:center;
+}
+
+}
+
+
+
+

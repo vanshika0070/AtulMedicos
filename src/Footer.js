@@ -15,9 +15,9 @@ function Footer() {
 
           {/* Left */}
           <div className="footer-left">
-            <Link to="/" className="footer-logo">
+            <Link to="/" className="logo">
               <img
-                src="/images/logo.webp"
+                src="/images/logo.png"
                 alt="Vanshika Manav"
               />
             </Link>
@@ -64,9 +64,8 @@ function Footer() {
 
             <div className="footer-bottom">
               <span>
-                Made by <strong><a href="/index"> Vanshika </a></strong>
+                Made by <a href="/index"><strong> Vanshika </strong></a>
               </span>
-
               <span>
                 Built in <strong>React</strong>
               </span>

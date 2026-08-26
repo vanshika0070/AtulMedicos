@@ -4,11 +4,11 @@ body{
    overflow-x: hidden;
   margin: 0;
 	padding: 0;
-  color:var(--white) !important;
+  color:var(--text) !important;
   line-height: 1.8;
   font-size: 1rem;
   img{ max-width: 100%; height: auto; display: block; }
-  background: var(--black);
+  background: var(--bg);
 }
 
 * {
@@ -33,27 +33,25 @@ html{
 
 
 
-#why-me,
+/* #why-me,
 #featured-work,
 #about,
 #freelanceform {
   scroll-margin-top: 150px;
-}
+} */
 
 
 
 :root {
-    --black: #000; 
-    --border:#313131;
-    --border-h-btn:#c9c5c5; 
-    --text-h-btn:#292929;
-    --border-h:#414040; 
-    --header-bg:#141414;
-    --btn-bgh:#181717;
-    --btn-bg:#0f0f0f;
-    --text:#c2bfbf;
-    --text-h:#929292;
+ 
     --white:#fff;
+    --black: #000; 
+    --bg: rgb(235, 242, 248);
+    --btn: hsl(142, 91%, 18%);
+    --btn-h: #0b554f;
+    --cards: #FFFFFF;
+    --heading: #102350;
+    --text: #4B6685;;
 
 }
 
@@ -61,16 +59,23 @@ html{
 
 
 section{
-  margin-bottom: 150px;
+  margin-bottom: 200px !important;
+    width:min(1200px,100%);
+    margin: auto;
 }
 
-.container{
-  padding-left: 10px;
-  padding-right: 10px;
+.badge{
+    color:var(--btn) !important; 
+    display:inline-flex;
+    align-items:center;
+    border: 2px solid var(--btn);
+    background: #e2f8ea;
+    padding:9px 13px;
+    border-radius:30px;
+    font-weight:600;
+    margin-bottom:40px;
 }
 
-
-/* Hero Buttons */
 .hero-buttons{
     width:100%;
     display:flex;
@@ -81,7 +86,7 @@ section{
 
 .buttons{
     display: flex;
-    gap: 18px;
+    gap: 17px;
     align-items: flex-start;
 }
 
@@ -91,17 +96,16 @@ section{
     align-items: center;
 }
 
-
  .btn-white {
   display: inline-block;
-  padding: 15px 30px;
-  border:1px solid var(--border);
-  border-radius: 30px;
-  background: var(--text) !important;
-  color: var(--black) !important;
+  padding: 13px 35px;
+  border:2px solid var(--btn);
+  border-radius: 10px;
+  background: var(--btn) !important;
+  color: var(--white) !important;
   text-decoration: none;
   letter-spacing: 1px;
-  font-weight: 600;
+  font-weight: 700;
   transition: 0.3s ease;
   position: relative;
   font-size: 0.8rem;
@@ -110,33 +114,32 @@ section{
 }
 
  .btn-white:hover {
-  background: var(--text-h) !important;
-  border:1px solid var(--border-h);
-    color: var(--black) !important;
+  background: var(--btn-h) !important;
+  border:2px solid var(--btn-h) !important;
+  color: var(--white) !important;
 }
 
 /* //////////// */
 
  .btn-dark {
   display: inline-block;
-  padding: 15px 30px;
-  border:1px solid var(--border-h-btn);
-  border-radius: 30px;
-   background: var(--text-h-btn) !important;
-  color: var(--white);
+  padding: 13px 35px;
+  border:2px solid var(--btn);
+  border-radius: 10px;
+  color: var(--btn) !important;
   text-decoration: none;
   letter-spacing: 1px;
-  font-weight: 600;
+  font-weight: 700;
   transition: 0.3s ease;
   position: relative;
   font-size: 0.8rem;
   z-index:9;
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .btn-dark:hover {
-  background: var(--card-bg) !important;
-  border:1px solid var(--border-h-btn);
+  border: 2px solid var(--btn-h) !important;
+  color: var(--btn-h) !important;
 }
 
 /* ////// */
@@ -174,15 +177,10 @@ section{
 }
 
 
-/* ////////// */
-.badge{
-  padding:8px 18px !important;
-  border:1px solid var(--border);
-  border-radius: 50px !important;
-  background: var(--btn-bg) !important;
-  color: var(--white) !important;
-  cursor: pointer;
-}
+
+/* //////////////////////////// */
+
+
 
 hr{
     width: 100%;
@@ -193,7 +191,7 @@ hr{
 }
 
 h1{
-  font-size:clamp(3rem,6vw,5rem);
+  font-size:clamp(2rem,6vw,rem);
   font-weight:700;
   line-height:1.1;
   letter-spacing:-1px;
@@ -201,10 +199,12 @@ h1{
 }
 
 h2{
-  color: var(--text-highlight);
-  font-size:3.3rem;
-  line-height:1.2;
+  color: var(--heading);
+  font-size:3.1rem;
+  line-height:1;
   font-weight:800;
+  margin: 0;
+  margin-bottom: 30px;
 }
 
 .section-heading{
@@ -212,13 +212,10 @@ h2{
   margin-bottom:50px;
 }
 
-h2 span{
-  color:var(--text);
-}
-
 .section-heading p{
   color:var(--text);
   font-weight: 600;
+  margin: 40px;
 }
 
 h3{
@@ -228,9 +225,10 @@ h3{
   font-weight:600;
 }
 
-h4{
-  font-size: 1.1rem;
-  color: var(--white);
+h5{
+  font-size: 1rem;
+  color: var(--black);
+  font-weight: 500;
 }
 
 
@@ -245,20 +243,10 @@ ul {
   color: var(--text);
 }
 
-
-.qr {
-  height: 400px !important;
-  object-fit: contain;
-  display: block;
-}
-
-
 .reply{
   color: var(--text-h);
   font-size: 0.85rem;
 }
-
-
 
 .availability1 {
     display: flex;
@@ -275,41 +263,22 @@ ul {
     border: 1px solid var(--text);
     border-radius: 30px;
 }
+
+
 /* ///////////////////////////////////////////// */
 
 
 @media(max-width:1199px) and (min-width:758px){
-  header {
-  padding: 30px;
-}
-
-#navbar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-    border:1px solid var(--border);
-  gap: 28px; /* spacing between logo, menu, button */
-  width: fit-content;
-  max-width: 100%;
-  padding: 8px 18px;
-  border-radius:10px;
-  background: var(--black);
-}
-
-  .banner{
-    height:auto;
-    min-height:100vh;
-    grid-template-columns:1fr !important;
-    grid-template-rows:70vh auto;
-    padding:4px;
-    gap:10px;
-  }
-
+ 
   h1{
     font-size:3rem;
   }
-
   
+  h2{
+    font-size: 2.75rem;
+    line-height: 1.25;
+  }
+
   h3{
     font-size:1.8rem;
   }
@@ -317,6 +286,12 @@ ul {
   section{
   margin-bottom: 170px;
   padding: 0 20px !important;
+}
+
+.section-heading span,
+.section-heading h2,
+.section-heading p{
+    margin: 10px;
 }
 
     .buttons{
@@ -335,21 +310,29 @@ ul {
 }
 
 
-
-
-
-
-
-
+/* ////////////////////////////////////////// */
 
 
 @media(max-width:757px){
+  
+section{
+  margin-bottom: 150px !important;
+   padding: 0 10px !important;
+}
+
+.section-heading span,
+.section-heading h2,
+.section-heading p{
+    margin: 10px;
+}
+
   h1{
-    font-size:2rem;
+    font-size:2.5rem !important;
   }
 
   h2{
-    font-size: 2rem;
+    font-size: 2.05rem;
+    line-height: 1.25;
   }
 
     h3{
@@ -357,13 +340,12 @@ ul {
   }
 
  .btn-white {
-  padding: 13px 28px;
+  padding: 10px 25px;
   font-size: 0.8rem;
-  
 }
 
  .btn-dark {
-  padding: 13px 28px;
+  padding: 10px 25px;
   font-size: 0.8rem;
 }
 
@@ -378,34 +360,10 @@ ul {
     min-width: auto;        
 }
 
-
-
 /* ////////// */
 .badge{
-  padding:8px 18px !important;
-  border:1px solid var(--border);
-  border-radius: 50px !important;
-  background: var(--btn-bg) !important;
-  color: var(--white) !important;
-  cursor: pointer;
+  padding:7px 13px !important;
 }
-
-.p1{
-  margin-top:25%;
-}
-
-.qr {
-  height: 400px !important;
-  width: 100%;
-  object-fit: contain;
-  display: block;
-}
-
-  section{
-  padding-left:  10px !important;
-  padding-right: 10px !important;
-}
-
 
     .hero-buttons{
         width: 100%;

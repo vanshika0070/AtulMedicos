@@ -2,51 +2,49 @@ import { useState } from "react";
 import "./Style.css";
 import "./Header.css";
 import { Link } from "react-router-dom";
-import Modal from "./Modal";
+import Offcanvas from "./Offcanvas";
 
 function Header() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header>
       <nav id="navbar">
         {/* LEFT SIDE */}
-       <div className="nav-left">
-  <button
-    className={`nav-toggler ${isModalOpen ? "open" : ""}`}
-    aria-label="Open navigation"
-    aria-expanded={isModalOpen}
-    onClick={() => setIsModalOpen(!isModalOpen)}
-  >
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+        <div className="nav-left">
+          <button
+            className={`nav-toggler ${isOpen ? "open" : ""}`}
+            aria-label="Open navigation"
+            aria-expanded={isOpen}
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
 
-  <a href="/" className="nav-logo">
-    <img src="/images/logo.webp" alt="Lazeez Logo" className="logo" />
-  </a>
-</div>
+          <a href="/" className="nav-logo">
+            <img src="/images/logo.png" alt="Lazeez Logo" className="logo" />
+          </a>
+        </div>
 
         {/* CENTER LINKS */}
-        <ul className="nav-links">
-          <li>
-            <Link to="/#why-me">Why Me?</Link>
-          </li>
-          <li>
-            <Link to="/#featured-work">Featured Work</Link>
-          </li>
+        <ul className="nav-links">        
            <li>
-            <Link to="/#about">About</Link>
+            <Link to="/about">About</Link>
           </li>
-        </ul>
+          <li>
+            <Link to="/products">Products</Link>
+          </li>
+          <li>
+            <Link to="/healthtips">Health Tips</Link>
+          </li>
 
+          <a href="tel:+919818125138" ><button className="btn-white" >Call For Enquiry </button></a>
+        </ul>
       </nav>
 
-      <Modal
-        isOpen={isModalOpen}
-        closeModal={() => setIsModalOpen(false)}
-      />
+      <Offcanvas isOpen={isOpen} closeOffcanvas={() => setIsOpen(false)} />
     </header>
   );
 }

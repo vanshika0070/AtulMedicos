@@ -4,17 +4,18 @@
     gap:10px;
     width:min(1200px,100%);
     margin:7% auto 40px;
-    padding:0 20px;
-    font-size:.95rem;
+    font-size:1.3rem;
 }
 
 .breadcrumb a{
-    color:var(--white);
+    color:var(--text) !important;
     transition:.3s;
+    font-weight: 500;
+
 }
 
 .breadcrumb a:hover{
-    color:var(--white);
+    color:var(--text);
 }
 
 .separator{
@@ -22,25 +23,17 @@
 }
 
 .current{
-    color:var(--text);
+    color:var(--heading);
     font-weight:600;
 }
 
 
 
 
-
 @media(max-width:1199px) and (min-width:758px){
-
-
 .breadcrumb{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    width:min(1200px,100%);
-    margin:17% auto 40px;
     padding:0 20px;
-    font-size:.95rem;
+    font-size:1.2rem;
 }
 }
 
@@ -49,11 +42,6 @@
  
 
 .breadcrumb{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    width:min(1200px,100%);
-    margin:23% auto 40px;
     padding:0 20px;
     font-size:.95rem;
 }

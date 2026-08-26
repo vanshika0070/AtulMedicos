@@ -1,26 +1,18 @@
 
- /*  HEADER */
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
+    padding: 20px 50px;
   width: 100%;
   z-index: 99;
-  padding: 30px;
+      background: transparent !important;
+
 }
 
 #navbar {
   display: flex;
   gap: 28px;
   justify-content: space-between;
-  margin: auto;
-  max-width: 50%;
-  padding: 8px 30px;
-  border-radius: 40px;
-  border: 1px solid var(--border);
-  background: rgba(0, 0, 0, 0.8); /* or your var(--header-bg) with transparency */
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
+      background: transparent !important;
+
 }
 
 .nav-left {
@@ -38,7 +30,7 @@ header {
 }
 
 .logo {
-  width: 40px;
+  width: 200px;
   height: auto;
   display: block;
   object-fit: contain;
@@ -54,7 +46,7 @@ header {
 }
 
 .nav-links a {
-  font-size: 0.7rem;
+  font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-decoration: none;
@@ -65,7 +57,11 @@ header {
 }
 
 .nav-links a:hover {
-  color:var(--white) !important;
+  color:var(--heading) !important;
+}
+
+.nav-links a:active {
+  color: var(--btn) !important;
 }
 
 .nav-toggler {
@@ -86,11 +82,11 @@ header {
   display: block;
   width: 100%;
   height: 1.5px;
-  background: var(--text-hover);
+  background: var(--heading);
   border-radius: 2px;
   transition:
-    transform 0.4s cubic-bezier(0.23,1,0.32,1),
-    opacity 0.3s;
+  transform 0.4s cubic-bezier(0.23,1,0.32,1),
+  opacity 0.3s;
 }
 
 .nav-toggler.open span:nth-child(1) {
@@ -106,125 +102,158 @@ header {
   transform: translateY(-6.5px) rotate(-45deg);
 }
 
-#navModal {
+
+
+/* ///////////// OFFCANVAS (replaces modal) ///////////// */
+
+.offcanvas-overlay {
   position: fixed;
   inset: 0;
-  z-index: 999 !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 998;
+  opacity: 0;
   pointer-events: none;
-  transition: background 0.5s ease;
+  transition: opacity 0.4s ease;
 }
 
-#navModal.active {
+.offcanvas-overlay.active {
+  opacity: 1;
   pointer-events: all;
-  padding:30px;
 }
 
-.modal-inner {
-  width: 100%;
-  height:100%;
+.offcanvas {
+  position: fixed;
+  top: 0;
+  left: 0;               /* was right: 0 */
+  height: 100%;
+  width: 70%;
+  z-index: 999;
+  background: var(--white);
+  padding: 30px 24px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  opacity: 0;
-  justify-content: center;
-  transform: translateY(20px);
+  transform: translateX(-100%);  /* was translateX(100%) */
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-#navModal.active .modal-inner {
-  opacity: 1;
-  transform: translateY(0);
-  border-radius: 20px;
- background: var(--btn-bg);
- border: 1px solid var(--border);
+.offcanvas.active {
+  transform: translateX(0);
 }
 
-.modal-nav-links {
-  list-style: none;
-  text-align: center;
-  padding: 0;
+.offcanvas-close {
+  display: none;
 }
 
-.modal-nav-links li {
-  overflow: hidden;
-  margin-bottom: 6px;
+.offcanvas-links a {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text) !important;
+  padding: 10px 0;
 }
 
-.modal-nav-links a {
-  font-size: clamp(1rem, 5vw, 3rem);
-  font-weight: 700;
-    text-transform: uppercase;
-  line-height: 1.5;
-  transform: translateY(110%);
-  transition:
-    transform 0.55s cubic-bezier(0.23,1,0.32,1),
-    color 0.3s,
-    letter-spacing 0.35s;
+ .offcanvas-links a:hover{
+  color: var(--heading) !important;
 }
 
-.modal-nav-links a:hover {
-  letter-spacing: 3px;
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 40px;
 }
 
-
-
-.modal-nav-links a {
-  transform: translateY(110%);
+.inner h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--btn-h);
 }
 
-
-#navModal.active .modal-nav-links a {
-  transform: translateY(0);
+.inner h4 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--heading);
 }
-
-
-
 
 
 /* ////////////////////////////////// */
 
 
+@media (max-width:1199px) and (min-width:758px){
+
+header{
+    width:100%;
+    padding:15px 20px;
+    box-sizing:border-box;
+}
+
+#navbar{
+    width:100%;
+}
+
+.nav-left{
+    display:flex;
+    align-items:center;
+    width:100%;
+}
+
+
+
+.nav-toggler{
+    margin-left:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+     order: 2;
+}
+
+.nav-links{
+    display:none;
+}
+
+
+.btn{
+    padding:10px 12px;
+    font-size:.7rem;
+}
+
+}
+
+
+
+
+/* //////////////////////////////////// */
 
 
 
 @media(max-width:757px){
 
   header{
-    padding:15px;
+    padding:15px 10px;
   }
-
-#navbar {
-  justify-content: space-between;
-  width: 100%;
-  max-width: 100%;
-  padding:7px 10px;
-  border-radius: 40px;
-  border: 1px solid var(--border);
-  background: rgba(0, 0, 0, 0.8); /* or your var(--header-bg) with transparency */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
   
+
 .nav-left {
   display: flex;
   align-items: center;
   width: 100%;
 }
 
-.nav-logo {
-  display: flex;
-  align-items: center;
-  order: 1;
-}
+
 
 .logo {
-  width: 35px;
-  height: auto;
   display: block;
   object-fit: contain;
+    width:150px;
+    height:auto;
 }
+
+  .nav-links {
+    display: none;
+  }
 
 .nav-toggler {
   display: flex;
@@ -237,76 +266,20 @@ header {
   border: none;
   cursor: pointer;
   padding: 4px;
-
   order: 2;
   margin-left: auto; /* Pushes it to the extreme right */
 }
 
-
-
-  .nav-links {
-    display: none;
-  }
 
    .btn {
   padding: 10px 12px;
   font-size: 0.7rem;
 }
 
-.modal-nav-links a:hover {
-  letter-spacing: normal;
-}
-
 }
 
 
 
 
-/* //////////////////////////////////////////// */
 
-
-
-@media(max-width:1199px) and (min-width:758px){
-  header {
-  padding: 30px;
-}
-
-#navbar {
-  justify-content:space-between;
-  border:1px solid var(--border);
-  gap: 28px; /* spacing between logo, menu, button */
-  width: 100%;
-  max-width: 100%;
-  padding: 10px 17px;
-  border-radius:40px;
-  background: var(--black);
-}
-
-.logo {
-  width: 45px;
-  height: auto;
-  display: block;
-  object-fit: contain;
-}
-
-
-.nav-toggler {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 34px;
-  height: 34px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-  display: none;
-}
-
- .modal-nav-links a:hover {
-  letter-spacing: normal;
-}
-
-}
 

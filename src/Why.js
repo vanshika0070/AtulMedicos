@@ -1,128 +1,78 @@
-import "./Why.css";
+import "./Products.css";
+import {
+  ShieldCheck,
+  Users,
+  Handshake,
+  Award,
+} from "lucide-react";
+
+const WhyData = [
+  {
+    id: 1,
+    icon: ShieldCheck,
+    title: "Genuine Medicines",
+    desc: "Every medicine is sourced from authorised distributors, ensuring authenticity and quality.",
+  },
+  {
+    id: 2,
+    icon: Users,
+    title: "Qualified Pharmacists",
+    desc: "Our experienced pharmacists provide trusted advice and answer your healthcare questions.",
+  },
+  {
+    id: 3,
+    icon: Handshake,
+    title: "Personalized Care",
+    desc: "We understand your needs and help you choose the right healthcare products.",
+  },
+  {
+    id: 4,
+    icon: Award,
+    title: "Trusted Since 1993",
+    desc: "Serving families with trusted care and reliable healthcare for over 30 years.",
+  },
+];
 
 function Why() {
   return (
-    <section  id="why-me" className="why">
+    <section className="products">
       <div className="container">
 
         <div className="section-heading">
+          <span className="badge">● Trusted Care</span>
 
-          <span className="badge">
-            ⦿ Why choose me
-          </span>
-
-          <h2>
-          Why Clients Keep <span> Coming Back</span>
-          </h2>
+          <h2>Why Families Trust Us</h2>
 
           <p>
-           Clarity, speed, and design that performs.
+            Providing trusted healthcare products and friendly service
+            you can rely on every day.
           </p>
-
         </div>
 
-        <div className="why-grid">
+        <div className="products-grid">
+          {WhyData.map((item) => {
+            const Icon = item.icon;
 
-          {/* Card 1 */}
+            return (
+              <div className="project-column" key={item.id}>
+                <div className="services-card">
 
-          <div className="why-card card1">
-            <h2>01.</h2>
+                  <div className="services-content">
 
-            <h3>
-              PROVEN DESIGN
-              <br />
-              THAT
-              <br />
-              CONVERTS
-            </h3>
+                    <div className="service-icon">
+                      <Icon size={28} strokeWidth={1.8} />
+                    </div>
 
-            <ul>
-              <li>✓ Designed for clarity</li>
-              <li>✓ Focused on user actions</li>
-            </ul>
-          </div>
+                    <h3>{item.title}</h3>
 
-          {/* Card 2 */}
+                    <p>{item.desc}</p>
 
-          <div className="why-card card2">
+                  </div>
 
-            <h2>02.</h2>
-
-            <h3>
-              BUILT TO SCALE WITH
-              <br />
-              YOUR BUSINESS
-            </h3>
-
-            <ul>
-              <li>✓ Easy to update later</li>
-              <li>✓ Future-ready design</li>
-            </ul>
-
-            <img
-              src="/images/person.png"
-              alt=""
-            />
-
-          </div>
-
-          {/* Card 3 */}
-
-          <div className="why-card card3">
-
-            <h2>03.</h2>
-
-            <h3>
-              CLEAR
-              <br />
-              COMMUNICATION.
-            </h3>
-
-            <ul>
-              <li>✓ Fast communication</li>
-              <li>✓ Full transparency</li>
-            </ul>
-
-          </div>
-
-          {/* Card 4 */}
-
-          <div className="why-card card4">
-
-            <h2>04.</h2>
-
-            <h3>
-              DELIVERED
-              <br />
-              ON TIME.
-            </h3>
-
-            <ul>
-              <li>✓ Reliable timelines</li>
-              <li>✓ No delays</li>
-            </ul>
-
-          </div>
-
-          {/* Card 5 */}
-
-          <div className="why-card card5">
-
-            <h2>05.</h2>
-
-            <h3>
-              DESIGN +
-              <br />
-              DEVELOPMENT
-            </h3>
-
-            <ul>
-              <li>✓ From design to live website</li>
-              <li>✓ No handoff issues</li>
-            </ul>
-
-          </div>
-
+                </div>
+              </div>
+            );
+          })}
         </div>
 
       </div>

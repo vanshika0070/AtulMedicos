@@ -5,11 +5,12 @@ import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
 
 import Home from "./Home";
-import Projectsall from "./Projectsall";
-import ProjectDetails from "./ProjectDetails"; // <-- Import this
-import AllBoutMe from "./AllBoutMe";
-import Freelance from "./Freelance";
-import Hire from "./Hire";
+import Productsall from "./Productsall";
+import ProductsDetails from "./ProductsDetails"; // <-- Import this
+import About from "./About";
+import HealthTips from "./HealthTips";
+import HealthArticle from "./HealthArticle";
+
 
 function App() {
   return (
@@ -20,15 +21,15 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/projectsall" element={<Projectsall />} />
+        <Route path="/productsall" element={<Productsall />} />
 
         {/* Dynamic slug route */}
-        <Route path="/:slug" element={<ProjectDetails />} />
+        <Route path="/:slug" element={<ProductsDetails />} />
 
-        <Route path="/allboutme" element={<AllBoutMe />} />
-        <Route path="/freelance" element={<Freelance />} />
-        <Route path="/hire" element={<Hire />} />
-      </Routes>
+        <Route path="/about" element={<About />} />
+        <Route path="/healthTips" element={<HealthTips />} />
+
+        <Route path="/health-tips/:slug" element={<HealthArticle />}/> </Routes>
 
       <Footer />
     </BrowserRouter>
