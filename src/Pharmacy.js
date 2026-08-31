@@ -9,7 +9,7 @@ function About() {
 
         <div className="section-heading">
           <span className="badge">● Our Story</span>
-          <h2> Your Trusted Local Pharmacy</h2>
+          <h2> 🌿Your Trusted Local Pharmacy🌿</h2>
           <p>The person, the process, and the thinking behind every project.</p>
         </div>
 
@@ -44,7 +44,7 @@ function About() {
       </div>
 
 <br />
-      <div className="products-grid">
+      {/* <div className="products-grid">
 
 
           <div className="stat-card">
@@ -67,7 +67,7 @@ function About() {
             <p>Brands</p>
           </div>
 
-        </div>
+        </div> */}
     </section>
   );
 }

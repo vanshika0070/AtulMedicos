@@ -1,4 +1,4 @@
-import "./Products.css";
+import "./Cards.css";
 import {
   ClipboardList,
   Stethoscope,
@@ -11,7 +11,7 @@ const servicesData = [
     id: 1,
     icon: ClipboardList,
     title: "Prescription Filling",
-    desc: "Quick and accurate dispensing of your prescribed medicines by our experienced pharmacists.",
+    desc: "Quick and accurate dispensing of your prescribed medicines by our pharmacists.",
   },
   {
     id: 2,
@@ -41,24 +41,24 @@ function Services() {
         <div className="section-heading">
           <span className="badge">● Our Services</span>
 
-          <h2>Healthcare Beyond Medicines</h2>
+          <h2>🌿Healthcare Beyond Medicines🌿</h2>
 
           <p>
             Supporting your wellbeing with trusted pharmacy services.
           </p>
         </div>
 
-        <div className="products-grid">
+        <div className="grid">
           {servicesData.map((service) => {
             const Icon = service.icon;
 
             return (
-              <div className="project-column" key={service.id}>
-                <div className="services-card">
+              <div className="sw-column" key={service.id}>
+                <div className="sw-card">
 
-                  <div className="project-content">
+                  <div className="sw-content">
 
-                    <div className="service-icon">
+                    <div className="sw-icon">
                       <Icon size={28} strokeWidth={1.8} />
                     </div>
 

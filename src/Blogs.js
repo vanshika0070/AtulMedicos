@@ -42,7 +42,7 @@ function Blogs() {
           <div className="section-heading">
             <span className="badge">● Health Tips</span>
 
-            <h2>Health Tips & Wellness Guides</h2>
+            <h2>🌿Health Tips & Wellness Guides🌿</h2>
 
             <p>
               Explore trusted health advice, medicine safety tips, and simple

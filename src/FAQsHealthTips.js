@@ -68,7 +68,7 @@ export default function FAQsHealthTips() {
         <div className="section-heading">
           <span className="badge">● Medicine & Health</span>
 
-          <h2>Medicine & Health FAQs</h2>
+          <h2>🌿Medicine & Health FAQs🌿</h2>
 
           <p>Get clear answers to common questions about using, storing, and understanding medicines safely.</p>
         </div>

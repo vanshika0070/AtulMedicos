@@ -5,16 +5,12 @@ import ContactForm from "./ContactForm";
 
 function Contactsection() {
   return (
-    <section className="Contactsection">
+    <section className="Contactsection" id="contact">
       <div className="container">
         <div className="section-heading">
           <span className="badge">● Healthcare Support</span>
-
-          <h2>We're Here to Help</h2>
-
-          <p>
-            Open to new opportunities in Frontend Development and UI/UX Design.
-          </p>
+          <h2>🌿Looking for a Medicine?🌿</h2>
+          <p>Can't find what you need? Ask us about availability.</p>
         </div>
 
         <div className="about-grid">

@@ -31,7 +31,7 @@ const Pharmacist = () => {
 
           <div className="tag">
             <div>
-              <span>✓</span> 25+ Years Experience
+              <span>✓</span> 30+ Years Experience
             </div>
             <div>
               <span>✓</span> Genuine Medicines

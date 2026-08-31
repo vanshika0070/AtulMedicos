@@ -43,7 +43,7 @@ function Products() {
           </p>
         </div>
 
-        <div className="grid">
+        <div className="products-grid">
 
           {blogs.map((blog, index) => (
             <div
@@ -65,6 +65,7 @@ function Products() {
                 className="expand"
               >
                 Explore Products
+                <span className="arrow">→</span>
               </Link>
 
             </div>

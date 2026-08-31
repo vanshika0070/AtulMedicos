@@ -44,7 +44,7 @@ export default function FAQs() {
         <div className="section-heading">
           <span className="badge">● Pharmacy FAQs</span>
 
-          <h2>Questions? We’re Here to Help</h2>
+          <h2>🌿Questions? We’re Here to Help🌿</h2>
 
           <p>Get quick answers about medicines, availability, payments, and pharmacy services.</p>
         </div>

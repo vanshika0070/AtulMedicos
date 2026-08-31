@@ -33,12 +33,10 @@ html{
 
 
 
-/* #why-me,
-#featured-work,
-#about,
-#freelanceform {
-  scroll-margin-top: 150px;
-} */
+#products,
+#contact {
+  scroll-margin-top: 100px;
+}
 
 
 
@@ -47,11 +45,13 @@ html{
     --white:#fff;
     --black: #000; 
     --bg: rgb(235, 242, 248);
+    --heading: #102350;
+    --text: #4B6685;
     --btn: hsl(142, 91%, 18%);
     --btn-h: #0b554f;
+    --icon-bg: #e9faf4;
+    --badge-bg: #d3f5e9;
     --cards: #FFFFFF;
-    --heading: #102350;
-    --text: #4B6685;;
 
 }
 
@@ -68,10 +68,10 @@ section{
     color:var(--btn) !important; 
     display:inline-flex;
     align-items:center;
-    border: 2px solid var(--btn);
-    background: #e2f8ea;
-    padding:9px 13px;
-    border-radius:30px;
+    background: var(--badge-bg);
+    border: 2px solid var(--icon-bg);
+    padding:7px 16px;
+    border-radius:8px;
     font-weight:600;
     margin-bottom:40px;
 }
@@ -100,7 +100,7 @@ section{
   display: inline-block;
   padding: 13px 35px;
   border:2px solid var(--btn);
-  border-radius: 10px;
+  border-radius: 9px;
   background: var(--btn) !important;
   color: var(--white) !important;
   text-decoration: none;
@@ -125,7 +125,7 @@ section{
   display: inline-block;
   padding: 13px 35px;
   border:2px solid var(--btn);
-  border-radius: 10px;
+  border-radius: 9px;
   color: var(--btn) !important;
   text-decoration: none;
   letter-spacing: 1px;
@@ -176,11 +176,18 @@ section{
     opacity: 1;
 }
 
-
-
 /* //////////////////////////// */
 
 
+.grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    width: 1600px;
+    margin: auto !important;
+}
+
+/* //////////////////////////////////////// */
 
 hr{
     width: 100%;

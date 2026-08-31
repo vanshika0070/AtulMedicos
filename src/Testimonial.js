@@ -51,7 +51,7 @@ function Testimonials() {
 
           <span className="badge">● In Their Words</span>
 
-          <h2>Stories From The Families We Serve</h2>
+          <h2>🌿Stories From The Families We Serve🌿</h2>
 
           <p>
             Real experiences from the people and families who trust us

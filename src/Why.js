@@ -1,4 +1,4 @@
-import "./Products.css";
+import "./Cards.css";
 import {
   ShieldCheck,
   Users,
@@ -41,7 +41,7 @@ function Why() {
         <div className="section-heading">
           <span className="badge">● Trusted Care</span>
 
-          <h2>Why Families Trust Us</h2>
+          <h2>🌿Why Families Trust Us🌿</h2>
 
           <p>
             Providing trusted healthcare products and friendly service
@@ -49,17 +49,17 @@ function Why() {
           </p>
         </div>
 
-        <div className="products-grid">
+        <div className="grid">
           {WhyData.map((item) => {
             const Icon = item.icon;
 
             return (
-              <div className="project-column" key={item.id}>
-                <div className="services-card">
+              <div className="products-column" key={item.id}>
+                <div className="sw-card">
 
-                  <div className="services-content">
+                  <div className="sw-content">
 
-                    <div className="service-icon">
+                    <div className="sw-icon">
                       <Icon size={28} strokeWidth={1.8} />
                     </div>
 
