@@ -1,5 +1,5 @@
 import { useParams, Link, useLocation } from "react-router-dom";
-import { productsall } from "./Productsall";
+import { productsall } from "./ProductsAll";
 import "./Style.css";
 
 function ProductsDetails() {

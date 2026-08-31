@@ -25,7 +25,7 @@ function App() {
 
         {/* Product category slug pages */}
         <Route
-          path="/productsall/:slug"
+          path="/productsAll/:slug"
           element={<ProductsAll />}
         />
 
