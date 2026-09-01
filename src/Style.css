@@ -187,6 +187,14 @@ section{
     margin: auto !important;
 }
 
+.products-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:25px;
+    width: 1600px;
+    margin: auto !important;
+}
+
 /* //////////////////////////////////////// */
 
 hr{
@@ -332,6 +340,16 @@ section{
 .section-heading p{
     margin: 10px;
 }
+
+.grid {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
+
+ .products-grid {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
 
   h1{
     font-size:2.5rem !important;

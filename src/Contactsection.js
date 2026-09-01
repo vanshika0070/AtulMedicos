@@ -17,19 +17,20 @@ function Contactsection() {
           {/* Left */}
           <div className="contact-info">
             <p className="subtitle">
-              <strong>📞 Call Us:</strong> 9818125138, 9810933906
+              <strong>📞 Call Us:</strong> 
+              <br/>9818125138
             </p>
 
             <p className="subtitle">
-              <strong>💬 Whatsapp:</strong> 9818125138, 9810933906
+              <strong>💬 Whatsapp:</strong><br/> 9818125138, 9810933906
             </p>
 
              <p className="subtitle">
-              <strong>🕒 Opening Hours:</strong> 9:00 — 23:00
+              <strong>🕒 Opening Hours:</strong><br/> 9:00 — 23:00
             </p>
 
             <p className="subtitle">
-              <strong>📍 Address:</strong>
+              <strong>📍 Address:</strong><br/>
             </p>
 
             <a

@@ -8,29 +8,32 @@ import {
 
 const servicesData = [
   {
-    id: 1,
-    icon: ClipboardList,
-    title: "Prescription Filling",
-    desc: "Quick and accurate dispensing of your prescribed medicines by our pharmacists.",
-  },
-  {
-    id: 2,
-    icon: Stethoscope,
-    title: "Expert Consultation",
-    desc: "Personal guidance from experienced pharmacists on medicines and dosage.",
-  },
-  {
-    id: 3,
-    icon: HeartPulse,
-    title: "BP Check",
-    desc: "Convenient in-store blood pressure monitoring with professional advice.",
-  },
-  {
-    id: 4,
-    icon: Pill,
-    title: "Medicine Availability",
-    desc: "Assistance in finding out-of-stock or hard-to-find medicines and suitable alternatives.",
-  },
+  id: 1,
+  icon: ClipboardList,
+  title: "Prescription Filling",
+  desc: "Quick and accurate dispensing of prescribed medicines by our pharmacy team.",
+},
+
+{
+  id: 2,
+  icon: Stethoscope,
+  title: "Pharmacist Guidance",
+  desc: "Get helpful guidance from our pharmacists about medicines and their proper use.",
+},
+
+{
+  id: 3,
+  icon: HeartPulse,
+  title: "Blood Pressure Check",
+  desc: "Convenient in-store blood pressure monitoring for your everyday health needs.",
+},
+
+{
+  id: 4,
+  icon: Pill,
+  title: "Medicine Availability",
+  desc: "Enquire about medicine availability and ask our team about suitable options when needed.",
+},
 ];
 
 function Services() {

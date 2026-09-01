@@ -3,34 +3,37 @@ import {
   ShieldCheck,
   Users,
   Handshake,
-  Award,
+  Phone,
 } from "lucide-react";
 
 const WhyData = [
-  {
-    id: 1,
-    icon: ShieldCheck,
-    title: "Genuine Medicines",
-    desc: "Every medicine is sourced from authorised distributors, ensuring authenticity and quality.",
-  },
-  {
-    id: 2,
-    icon: Users,
-    title: "Qualified Pharmacists",
-    desc: "Our experienced pharmacists provide trusted advice and answer your healthcare questions.",
-  },
-  {
-    id: 3,
-    icon: Handshake,
-    title: "Personalized Care",
-    desc: "We understand your needs and help you choose the right healthcare products.",
-  },
-  {
-    id: 4,
-    icon: Award,
-    title: "Trusted Since 1993",
-    desc: "Serving families with trusted care and reliable healthcare for over 30 years.",
-  },
+ {
+  id: 1,
+  icon: ShieldCheck,
+  title: "Genuine Medicines",
+  desc: "Medicines sourced through authorised channels to help ensure authenticity and quality.",
+},
+
+{
+  id: 2,
+  icon: Users,
+  title: "Qualified Pharmacists",
+  desc: "Our qualified pharmacists are available to assist with medicine-related questions.",
+},
+
+{
+  id: 3,
+  icon: Handshake,
+  title: "Personalized Care",
+  desc: "We take the time to understand your needs and help you find suitable healthcare products.",
+},
+
+{
+  id: 4,
+  icon: Phone,
+  title: "Easy Enquiry",
+  desc: "Quickly contact us to enquire about medicine and product availability.",
+},
 ];
 
 function Why() {

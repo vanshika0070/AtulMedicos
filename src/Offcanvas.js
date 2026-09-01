@@ -27,13 +27,13 @@ function Offcanvas({ isOpen, closeOffcanvas }) {
 
         <ul className="offcanvas-links">
           <li>
-            <Link to="/about" onClick={closeOffcanvas}>👤 About</Link>
-          </li>
-          <li>
             <Link to="/products" onClick={closeOffcanvas}>💊 Products</Link>
           </li>
           <li>
             <Link to="/healthtips" onClick={closeOffcanvas}>❤️ Health Tips</Link>
+          </li>
+          <li>
+            <Link to="/about" onClick={closeOffcanvas}>👤 About</Link>
           </li>
 
   <a href="tel:+919818125138" ><button className="btn-white" >Call For Enquiry </button></a>

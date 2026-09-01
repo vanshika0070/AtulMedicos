@@ -29,16 +29,17 @@ function Header() {
         </div>
 
         {/* CENTER LINKS */}
-        <ul className="nav-links">        
-           <li>
-            <Link to="/about">About</Link>
-          </li>
+        <ul className="nav-links">      
           <li>
             <Link to="/products">Products</Link>
-          </li>
+          </li>  
           <li>
             <Link to="/healthtips">Health Tips</Link>
           </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+
 
           <a href="tel:+919818125138" ><button className="btn-white" >Call For Enquiry </button></a>
         </ul>

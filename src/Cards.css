@@ -43,7 +43,7 @@
     border: 1px solid var(--btn) !important;
     border-radius: 9px;
     background: var(--icon-bg);
-    padding: 7px 20px;
+    padding: 5px 9px;
     font-weight: 600;
     width: auto;
     position: absolute;

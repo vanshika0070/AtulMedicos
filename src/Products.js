@@ -3,10 +3,16 @@ import { Link } from "react-router-dom";
 
 const blogs = [
   {
-    title: "Pain Relief",
+    title: "Medicines",
     image: "/images/Managing Fever at Home.webp",
     description: "Tablets, sprays and gels for fast pain relief.",
     link: "/productsall/pain-relief",
+  },
+    {
+    title: "Personal Care",
+    image: "/images/How to Read Medicine Labels.webp",
+    description: "Products for newborn and infant healthcare.",
+    link: "/productsall/personal-care",
   },
   {
     title: "Vitamins & Supplements",
@@ -14,14 +20,15 @@ const blogs = [
     description: "Daily nutrition and immunity support products.",
     link: "/productsall/vitamins-and-supplements",
   },
+  
   {
-    title: "First Aid",
+    title: "Healthcare Essentials",
     image: "/images/How to Read Medicine Labels.webp",
     description: "Bandages, antiseptics and wound care essentials.",
     link: "/productsall/first-aid",
   },
   {
-    title: "Personal Care",
+    title: "Baby Care",
     image: "/images/How to Read Medicine Labels.webp",
     description: "Products for newborn and infant healthcare.",
     link: "/productsall/personal-care",
@@ -43,7 +50,7 @@ function Products() {
           </p>
         </div>
 
-        <div className="grid">
+        <div className="products-grid">
 
           {blogs.map((blog, index) => (
             <div
