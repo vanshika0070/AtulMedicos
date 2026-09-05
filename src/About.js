@@ -19,16 +19,6 @@ function Contact() {
       <Services /> 
       <Pharmacist /> 
       <Why /> 
-      {/* <section className="aboutsection">
-            <div className="section-heading">
-                <h2>Your Health Is Our Priority</h2>
-                <div className="button-group">
-                  <Link to="/Contact" className="btn-white">
-                    Visit Our Store
-                  </Link>
-                </div> 
-          </div>  
-      </section>    */}
     </>
   );
 }

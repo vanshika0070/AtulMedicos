@@ -465,11 +465,11 @@
         left: 50%;
         right: auto;
         transform: translateX(-50%);
-        width: 90%;
+        width: 100%;
         height:auto;
         padding: 20px;
         border-radius: 22px;
-   transition: transform 0.3s ease;
+   box-shadow:none;
 }
 
 

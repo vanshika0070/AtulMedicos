@@ -1,82 +1,110 @@
-
 import "./Style.css";
-
 import ContactForm from "./ContactForm";
+
+import {
+  Pill,
+  ClipboardList,
+  Stethoscope,
+  Zap,
+} from "lucide-react";
 
 function Contactsection() {
   return (
     <section className="Contactsection" id="contact">
       <div className="container">
+
         <div className="section-heading">
           <span className="badge">● Healthcare Support</span>
-          <h2>🌿Looking for a Medicine?🌿</h2>
-          <p>Can't find what you need? Ask us about availability.</p>
+
+          <h2>🌿 Looking for a Medicine? 🌿</h2>
+
+          <p>
+            Can't find what you need? Ask us about availability.
+          </p>
         </div>
 
         <div className="about-grid">
-          {/* Left */}
+
+          {/* LEFT SIDE */}
           <div className="contact-info">
-            <p className="subtitle">
-              <strong>📞 Call Us:</strong> 
-              <br/>9818125138
-            </p>
 
-            <p className="subtitle">
-              <strong>💬 Whatsapp:</strong><br/> 9818125138, 9810933906
-            </p>
+            <div className="form-heading">
+              <h3>
+                How Can We <span>Help?</span>
+              </h3>
+            </div>
 
-             <p className="subtitle">
-              <strong>🕒 Opening Hours:</strong><br/> 9:00 — 23:00
-            </p>
+            <div className="contact-info-list">
 
-            <p className="subtitle">
-              <strong>📍 Address:</strong><br/>
-            </p>
+              <div className="contact-info-item">
+                <span className="contact-icon">
+                  <Pill />
+                </span>
 
-            <a
-  href="https://maps.google.com/?q=Atul+Medicos+Jeewan+Park+Uttam+Nagar+New+Delhi"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="map-link"
->
-  <div className="map-cell">
-    <div className="map-bg"></div>
+                <div>
+                  <small>Medicine Availability</small>
 
-      <div className="pin">
-      <div
-        style={{
-          position: "relative",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          width: 14,
-          height: 14,
-        }}
-      >
-        <div className="pin-pulse"></div>
-        <div className="pin-dot"></div>
-      </div>
-    </div>
+                  <p className="contact-info-text">
+                    Check availability of medicines
+                  </p>
+                </div>
+              </div>
 
-    <div className="map-label">
-      <div className="map-address-tag">
-        <span className="map-sub">
-          Atul Medicos, Jeewan Park, Uttam Nagar
-        </span>
-        <span className="map-title">New Delhi</span>
-      </div>
+              <hr/>
 
+              <div className="contact-info-item">
+                <span className="contact-icon">
+                  <ClipboardList />
+                </span>
 
-    </div>
-  </div>
-</a>
- 
+                <div>
+                  <small>Prescription Exquiry</small>
+
+                  <p className="contact-info-text">
+                    Upload your Prescription for assistance
+                  </p>
+                </div>
+              </div>
+
+              <hr/>
+
+              <div className="contact-info-item">
+                <span className="contact-icon">
+                  <Stethoscope />
+                </span>
+
+                <div>
+                  <small>Product Guidance</small>
+
+                  <p className="contact-info-text">
+                    Get expert advice on theright products
+                  </p>
+                </div>
+              </div>
+
+    <hr/>
+              <div className="store-call">
+                  <div className="contact-info-item">
+                      <div className="call-icon">
+                        <Zap />
+                      </div>
+              
+                      <div>          
+                        <small>Quick & Easy</small>
+                        <p className="contact-info-text"> Send your enquiry and we'll get back to you soon</p>     
+                      </div>
+                  </div>
+              </div>
+              
+            </div>
+
           </div>
-          
-          {/* Right */}
+
+          {/* RIGHT SIDE */}
           <div className="form-card">
             <ContactForm />
           </div>
+
         </div>
       </div>
     </section>
@@ -84,6 +112,8 @@ function Contactsection() {
 }
 
 export default Contactsection;
+
+
 
 
 

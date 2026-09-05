@@ -1,4 +1,7 @@
-import "./HealthArticle.css";
+
+
+
+import "./Cards.css";
 import { Link } from "react-router-dom";
 
 const blogs = [
@@ -6,36 +9,35 @@ const blogs = [
     title: "Medicines",
     image: "/images/Managing Fever at Home.webp",
     description: "Tablets, sprays and gels for fast pain relief.",
-    link: "/productsall/pain-relief",
+    slug: "medicines",
   },
-    {
+  {
     title: "Personal Care",
     image: "/images/How to Read Medicine Labels.webp",
     description: "Products for newborn and infant healthcare.",
-    link: "/productsall/personal-care",
+    slug: "personal-care",
   },
   {
     title: "Vitamins & Supplements",
     image: "/images/First Aid Essentials for Your Home.webp",
     description: "Daily nutrition and immunity support products.",
-    link: "/productsall/vitamins-and-supplements",
+    slug: "vitamins-supplements",
   },
-  
   {
     title: "Healthcare Essentials",
     image: "/images/How to Read Medicine Labels.webp",
     description: "Bandages, antiseptics and wound care essentials.",
-    link: "/productsall/first-aid",
+    slug: "healthcare-essentials",
   },
   {
     title: "Baby Care",
     image: "/images/How to Read Medicine Labels.webp",
     description: "Products for newborn and infant healthcare.",
-    link: "/productsall/personal-care",
+    slug: "baby-care",
   },
 ];
 
-function Products() {
+function Products({ from = "home" }) {
   return (
     <section className="products" id="products">
       <div className="container">
@@ -58,17 +60,20 @@ function Products() {
               key={index}
             >
 
-              <img
-                src={blog.image}
-                alt={blog.title}
-              />
+              <div className="products-card-image">
+                <img
+                  src={blog.image}
+                  alt={blog.title}
+                />
+              </div>
 
               <h3>{blog.title}</h3>
 
               <p>{blog.description}</p>
 
               <Link
-                to={blog.link}
+                to={`/products/${blog.slug}`}
+                state={{ from }}
                 className="expand"
               >
                 Explore Products

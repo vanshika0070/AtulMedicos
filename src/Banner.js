@@ -277,7 +277,7 @@ function Banner() {
                   </h5>
 
                   <small>
-                    8:30 AM – 11:00 PM
+                    9:30 AM – 11:00 PM
                   </small>
 
                 </div>

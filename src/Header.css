@@ -30,7 +30,7 @@ header {
 }
 
 .logo {
-  width: 200px;
+  width: 130px;
   height: auto;
   display: block;
   object-fit: contain;
@@ -109,7 +109,7 @@ header {
 .offcanvas-overlay {
   position: fixed;
   inset: 0;
-  z-index: 998;
+  z-index: 1000 !important;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s ease;
@@ -123,10 +123,10 @@ header {
 .offcanvas {
   position: fixed;
   top: 0;
-  left: 0;               /* was right: 0 */
+  left: 0;               
   height: 100%;
   width: 70%;
-  z-index: 999;
+  z-index: 1000;
   background: var(--white);
   padding: 30px 24px;
   display: flex;
@@ -247,7 +247,7 @@ header{
 .logo {
   display: block;
   object-fit: contain;
-    width:150px;
+    width:100px;
     height:auto;
 }
 
@@ -269,7 +269,6 @@ header{
   order: 2;
   margin-left: auto; /* Pushes it to the extreme right */
 }
-
 
    .btn {
   padding: 10px 12px;

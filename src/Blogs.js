@@ -1,4 +1,4 @@
-import "./HealthArticle.css";
+import "./Cards.css";
 import { Link } from "react-router-dom";
 
 const blogs = [
@@ -27,15 +27,6 @@ const blogs = [
 
 function Blogs() {
   return (
-    <>
-      <div className="breadcrumb">
-        <Link to="/">Home</Link>
-
-        <span className="separator">/</span>
-
-        <span className="current">Health Tips</span>
-      </div>
-
       <section className="testimonials">
         <div className="container">
 
@@ -87,7 +78,6 @@ function Blogs() {
 
         </div>
       </section>
-    </>
   );
 }
 

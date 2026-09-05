@@ -117,7 +117,7 @@ function HealthArticle() {
       <section className="health-article">
         <div className="container">
           <h1>Article Not Found</h1>
-          <Link to="/health-tips">← Back to Health Tips</Link>
+          <Link to="/healthtips">← Back to Health Tips</Link>
         </div>
       </section>
     );
@@ -128,7 +128,7 @@ function HealthArticle() {
       <div className="breadcrumb">
         <Link to="/">Home</Link>
         <span className="separator">/</span>
-        <Link to="/health-tips">Health Tips</Link>
+        <Link to="/healthtips">Health Tips</Link>
         <span className="separator">/</span>
         <span className="current">{article.title}</span>
       </div>
@@ -140,7 +140,7 @@ function HealthArticle() {
 
             <h2>{article.title}</h2>
 
-            <p className="article-intro">
+            <p>
               {article.intro}
             </p>
           </div>

@@ -32,35 +32,6 @@
     transition:.4s;
 }
 
-.availability{
-    position:absolute;
-    bottom:30px;
-    left:50%;
-    transform:translateX(-50%);
-    display:flex;
-    align-items:center;
-    gap:12px;
-    padding:8px 16px;
-    background: linear-gradient(
-        135deg,
-        rgba(0, 0, 0,.0.5),
-        rgba(0, 0, 0,.07)
-    ) ;
-    backdrop-filter:blur(15px);
-    border-radius:30px;
-    color:var(--white);
-    border: 1px solid var(--text);
-    font-weight:600;
-}
-
-.dot{
-    width:10px;
-    height:10px;
-    background:#30ff52;
-    border-radius:50%;
-    box-shadow:0 0 10px #30ff52;
-}
-
 .about-content{
     display:flex;  
     flex-direction:column;
@@ -90,27 +61,27 @@
 
 .stat-card{
     width:100%;
-    padding:0 20px 30px;
+    padding:0 0 10px;
     text-align:center;
-    background:var(--white);
-    border-radius:20px;
+    border: 1px solid var(--text);
+    border-radius:13px;
     transition:.35s;
     margin: auto;
 }
 
 .stat-card:hover{
-    transform:translateY(-3px);
+    transform:translateY(-2px);
 }
 
 .stat-card h3{
-    font-size:2.7rem;
+    font-size:1.3rem;
     font-weight: bold;
     color: var(--heading);
-    margin-bottom:12px;
+    margin-bottom:5px;
 }
 
 .stat-card p{
-    color:var(--text);
+    color:var(--heading) !important;
     margin:0;
 }
 
@@ -255,7 +226,7 @@
   background: transparent !important;
   padding: 8px 18px;
   border:1px solid var(--text) !important;
-  border-radius: 50px;
+  border-radius: 7px;
   font-size: 14px;
 }
 
@@ -264,15 +235,6 @@
   font-weight: bold;
 }
 
-.pharmacist-btn {
-  padding: 14px 30px;
-  border: none;
-  border-radius: 30px;
-  background: var(--btn);
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-}
 
 /* /////////////////////////////////////////// */
 

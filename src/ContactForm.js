@@ -5,6 +5,9 @@ import "./Style.css";
 export default function ContactForm() {
   const [topic, setTopic] = useState("");
   const [subTopic, setSubTopic] = useState("");
+  const [image, setImage] = useState(null);
+
+  const whatsappNumber = "919266343666";
 
   const enquiryOptions = {
     "Medicine Availability": [
@@ -17,15 +20,15 @@ export default function ContactForm() {
       "Personal Care",
     ],
 
-    "Prescription Medicines": [
-      "Need a Prescription",
+    "Prescription Enquiry": [
+      "Medicine Availability",
       "Alternative Medicine",
       "Dosage Information",
-      "Medicine Availability",
+      "Prescription Assistance",
     ],
 
-    "Healthcare Products": [
-      "Vitamins",
+    "Product Guidance": [
+      "Vitamins & Supplements",
       "Skin Care",
       "Hair Care",
       "Baby Care",
@@ -40,78 +43,103 @@ export default function ContactForm() {
       "Thermometer",
       "Pulse Oximeter",
     ],
-
-    "Store Information": [
-      "Opening Hours",
-      "Store Location",
-      "Payment Methods",
-      "Parking",
-      "Contact Details",
-    ],
   };
 
   const onSubmit = (event) => {
     event.preventDefault();
 
-    const form = event.target;
+    const form = event.currentTarget;
 
-    const name = form.name.value;
-    const phone = form.phone.value;
-    const details = form.details.value;
+    const name = form.name.value.trim();
+    const phone = form.phone.value.trim();
+    const details = form.details?.value?.trim() || "";
 
-    const whatsappNumber = "9266343666";
+    const message = `Hello Atul Medicos 👋
 
-    const message = `Hello Atul Medicos,
+I have an enquiry.
 
 Name: ${name}
 Phone: ${phone}
+Enquiry: ${topic}
+${subTopic ? `Category: ${subTopic}` : ""}
 
-Enquiry Type: ${topic}
-Category: ${subTopic || "N/A"}
+${details ? `Details:\n${details}` : ""}
 
-Additional Details:
-${details || "None"}
+${
+  image
+    ? "📎 I have selected an image/prescription. I will attach it here."
+    : ""
+}
 
-Thank you.`;
+Please let me know about this.`;
 
-    window.open(
-      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
-      "_blank"
-    );
+    const whatsappUrl =
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-    form.reset();
-    setTopic("");
-    setSubTopic("");
+    window.open(whatsappUrl, "_blank");
+  };
+
+  const openDirectChat = () => {
+    const message = `Hello Atul Medicos 👋
+
+I need some assistance.`;
+
+    const whatsappUrl =
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappUrl, "_blank");
   };
 
   return (
-      <form onSubmit={onSubmit}>
+    <div className="contact-info">
 
-        {/* Name */}
-        <div className="form-group">
-          <input
-            type="text"
-            name="name"
-            className="form-input"
-            placeholder="Enter Your Name"
-            required
-          />
+      <form onSubmit={onSubmit} className="contact-form">
+
+        <div className="form-heading">
+          <h3>
+            Send Your Enquiry <span>on WhatsApp</span>
+          </h3>
+
+          <p>
+            Tell us what you need and we'll help you as quickly as possible.
+          </p>
         </div>
 
-        {/* Phone */}
-        <div className="form-group">
-          <input
-            type="tel"
-            name="phone"
-            className="form-input"
-            placeholder="Enter Phone Number"
-            pattern="[0-9]{10}"
-            required
-          />
+
+        {/* Name + Phone */}
+        <div className="form-row">
+
+          <div className="form-group">
+            <input
+              type="text"
+              name="name"
+              className="form-input"
+              placeholder="Your Name"
+              autoComplete="name"
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <input
+              type="tel"
+              name="phone"
+              className="form-input"
+              placeholder="Phone Number"
+              inputMode="numeric"
+              autoComplete="tel"
+              pattern="[0-9]{10}"
+              maxLength="10"
+              required
+            />
+          </div>
+
         </div>
 
-        {/* First Select */}
+
+        {/* Main Enquiry */}
         <div className="form-group">
+
           <select
             className="form-input"
             value={topic}
@@ -121,7 +149,9 @@ Thank you.`;
             }}
             required
           >
-            <option value="">What do you need help with?</option>
+            <option value="">
+              What do you need help with?
+            </option>
 
             {Object.keys(enquiryOptions).map((item) => (
               <option key={item} value={item}>
@@ -129,51 +159,150 @@ Thank you.`;
               </option>
             ))}
 
-            <option value="Other">Other</option>
+            <option value="Other">
+              Other Enquiry
+            </option>
           </select>
+
         </div>
 
-        {/* Second Select */}
+
+        {/* Category */}
         {topic && topic !== "Other" && (
+
           <div className="form-group">
+
             <select
               className="form-input"
               value={subTopic}
               onChange={(e) => setSubTopic(e.target.value)}
               required
             >
-              <option value="">Select a category</option>
+              <option value="">
+                Select a category
+              </option>
 
               {enquiryOptions[topic].map((item) => (
                 <option key={item} value={item}>
                   {item}
                 </option>
               ))}
+
             </select>
+
           </div>
+
         )}
 
-        {/* Details */}
-        {(topic === "Other" || subTopic) && (
+
+        {/* Message */}
+        {topic && (
+
           <div className="form-group full">
+
             <textarea
               name="details"
-              rows="5"
+              rows="4"
               className="form-textarea"
-              placeholder="Additional details (optional)"
+              placeholder={
+                topic === "Other"
+                  ? "Tell us what you need help with..."
+                  : "Add medicine name, product name or any other details..."
+              }
             />
+
           </div>
+
         )}
 
-        <button className="btn-form" type="submit">
-          💬 Send via WhatsApp
-        </button>
+
+        {/* IMAGE UPLOAD */}
+        <div className="form-group full">
+
+          <label className="upload-box">
+
+            <input
+              type="file"
+              accept="image/png,image/jpeg,image/jpg,image/webp"
+              onChange={(e) => {
+                const file = e.target.files[0];
+
+                if (file) {
+                  setImage(file);
+                }
+              }}
+            />
+
+
+            <div className="upload-content">
+
+              <strong>
+                {image
+                  ? image.name
+                  : "Upload Prescription (Optional)"}
+              </strong>
+
+              <span>
+                JPG, PNG or WEBP (Max 5MB)
+              </span>
+
+            </div>
+
+            <div className="upload-action">
+              Browse
+            </div>
+
+          </label>
+
+          {image && (
+            <button
+              type="button"
+              className="remove-image"
+              onClick={() => setImage(null)}
+            >
+              Remove image
+            </button>
+          )}
+
+        </div>
+
+
+        {/* WhatsApp Submit */}
+        <button
+          className="btn-form"
+          type="submit"
+        >Send Enquiry on WhatsApp</button>
 
         <p className="reply">
-          Clicking the button will open WhatsApp with your enquiry ready to
-          send.
+          Your enquiry will open in WhatsApp ready for you to send.
         </p>
 
       </form>
+
+
+      {/* Direct WhatsApp */}
+      <div className="direct-whatsapp">
+
+        <div>
+          <strong>
+            Prefer to chat directly?
+          </strong>
+
+          <p>
+            Start a WhatsApp conversation with us.
+          </p>
+        </div>
+
+        <button
+          type="button"
+          className="chat-whatsapp-btn"
+          onClick={openDirectChat}
+        >
+          Chat on WhatsApp →
+        </button>
+
+      </div>
+
+    </div>
   );
 }

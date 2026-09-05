@@ -183,7 +183,7 @@ section{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:25px;
-    width: 1600px;
+       width:min(1600px,100%);
     margin: auto !important;
 }
 
@@ -191,7 +191,15 @@ section{
     display:grid;
     grid-template-columns:repeat(5,1fr);
     gap:25px;
-    width: 1600px;
+        width:min(1600px,100%);
+    margin: auto !important;
+}
+
+.store-products-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+        width:min(1200px,100%);
     margin: auto !important;
 }
 
@@ -232,6 +240,8 @@ h2{
   font-weight: 600;
   margin: 40px;
 }
+
+
 
 h3{
   font-size:1.7rem;
@@ -303,6 +313,17 @@ ul {
   padding: 0 20px !important;
 }
 
+.grid {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+
+ .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+
+
 .section-heading span,
 .section-heading h2,
 .section-heading p{
@@ -350,6 +371,12 @@ section{
         grid-template-columns: repeat(1, 1fr);
         width: 100%;
     }
+
+    .store-products-grid{
+        grid-template-columns: repeat(1, 1fr) !important;
+        width: 100%;
+    }
+    
 
   h1{
     font-size:2.5rem !important;
@@ -405,6 +432,7 @@ section{
     .button-group{
         align-items: flex-start;
     }
+    
 
 }
 

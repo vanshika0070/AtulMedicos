@@ -11,11 +11,11 @@ function Home() {
     <>
       <Banner />
       <Products from="home" />
-      <Services/> 
-      <Why /> 
-      <Testimonial/>
-      <Contactsection/>
-      <FAQs/>
+      <Services />
+      <Why />
+      <Testimonial />
+      <Contactsection />
+      <FAQs />
     </>
   );
 }

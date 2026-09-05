@@ -5,6 +5,8 @@ const Pharmacist = () => {
   return (
     <section className="pharmacist-section">
       <div className="pharmacist-container">
+        <div className="about-grid">
+          
 
         <div className="pharmacist-image">
           <img
@@ -34,17 +36,17 @@ const Pharmacist = () => {
               <span>✓</span> 30+ Years Experience
             </div>
             <div>
-              <span>✓</span> Genuine Medicines
+              <span>✓</span> Expert Pharmacist
             </div>
             <div>
-              <span>✓</span> Personalized Guidance
+              <span>✓</span> Trusted Advice
             </div>
           </div>
 
-          <button className="pharmacist-btn">
-            Contact Pharmacist
-          </button>
+          <a href="tel:+919818125138" ><button className="btn-white" >Call For Enquiry </button></a>
         </div>
+        </div>
+
 
       </div>
     </section>

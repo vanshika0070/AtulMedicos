@@ -39,19 +39,7 @@ function About() {
 
             <p className="description">Whether you're managing a long-term condition, picking up a prescription, or looking for wellness essentials, our experienced team is here to help you make informed health decisions with confidence.</p>
 
-          </div>
-        </div>
-      </div>
-
-<br />
-      {/* <div className="products-grid">
-
-
-          <div className="stat-card">
-            <h3>30+</h3>
-            <p>Years</p>
-          </div>
-
+            <div className="blogs-grid">
           <div className="stat-card">
             <h3>10k+</h3>
             <p> Happy Customers</p>
@@ -67,7 +55,14 @@ function About() {
             <p>Brands</p>
           </div>
 
-        </div> */}
+        </div>
+          </div>
+          
+        </div>
+      </div>
+
+<br />
+      
     </section>
   );
 }

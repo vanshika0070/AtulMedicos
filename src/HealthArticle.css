@@ -1,87 +1,6 @@
 
 
 
-.blogs-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:28px;
-    width: min(1200px, 100%);
-    margin: auto;
-}
-
-
-.blogs-card{
-    background:var(--white);
-    border-radius:15px;
-    padding:20px;
-    transition:.3s;
-}
-
-.blogs-card:hover{
-    transform:translateY(-3px);
-}
-
-
-.blogs-card img {
-    width: 100%;
-    height: 220px;   
-    border-radius:15px;
-    object-fit: cover;  /* Crops image while filling the space */
-    display: block;
-}
-
-.blogs-card h3{
-    margin-top:30px;
-    color:var(--heading) !important;
-    font-size:1.2rem;
-}
-
-
-.blogs-card p{
-    color:var(--text);
-    margin-bottom:25px;
-    line-height:1.6;
-}
-
-.blogs-card .read-more {
-    display: inline-block;
-    margin-top: 10px;
-    color: var(--text) !important;
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.blogs-card .arrow {
-    display: inline-block;
-    margin-left: 5px;
-    transition: transform 0.3s ease;
-}
-
-/* Arrow moves when the card is hovered */
-.blogs-card:hover .arrow {
-    transform: translateX(5px);
-}
-
-
-
-
-
-
-
-
-/* ///////////////////////////////////////// */
-
-
-
-
-
-
-
-
-
-
-
 
 
 .health-article {
@@ -99,12 +18,6 @@
     color: var(--heading);
     font-size: 3.5rem;
     line-height: 1.1;
-}
-
-.article-intro {
-    color: var(--text);
-    font-size: 1.1rem;
-    line-height: 1.7;
 }
 
 .article-image {
@@ -154,21 +67,6 @@
 }
 
 
-
-
-
-
-
-/* Tablet */
-
-@media (max-width:1199px) and (min-width:658px){
-
-    .blogs-grid{
-        grid-template-columns:1fr;
-    }
-
-}
-
 /* Mobile */
 
 @media (max-width:657px){
@@ -176,12 +74,7 @@
     margin:10px ;
 }
 
-.blogs-grid{
-    grid-template-columns:1fr;
-       margin-top:50px !important;
-   gap:30px;
-}
-  
+
 
 }
 

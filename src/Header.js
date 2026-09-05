@@ -24,14 +24,14 @@ function Header() {
           </button>
 
           <a href="/" className="nav-logo">
-            <img src="/images/logo.png" alt="Lazeez Logo" className="logo" />
+            <img src="/images/logo.webp" alt="Lazeez Logo" className="logo" />
           </a>
         </div>
 
         {/* CENTER LINKS */}
         <ul className="nav-links">      
           <li>
-            <Link to="/products">Products</Link>
+            <Link to="/productspage">Products</Link>
           </li>  
           <li>
             <Link to="/healthtips">Health Tips</Link>
